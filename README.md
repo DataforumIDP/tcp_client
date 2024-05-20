@@ -61,9 +61,8 @@ TCP Electron App - это простое приложение, разработ�
 |-- package.json
 
 
-И файл LICENSE:
+LICENSE:
 
-```plaintext
 MIT License
 
 © 2024 Anton Ptrov
