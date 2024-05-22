@@ -23,7 +23,7 @@ client.on('data', function(data) {
 
 client.on('close', function() {
     //console.log('Соединение закрыто, попытка переподключения...');
-    setTimeout(connect, 100);
+    setTimeout(connect, 5000);
 });
 
 client.on('error', function(err) {
