@@ -14,6 +14,9 @@ function createWindow() {
         }
     });
     mainWindow.loadFile('index.html');
+    mainWindow.webContents.on('did-finish-load', () => {
+        mainWindow.webContents.insertCSS('body { user-select: none; } input { user-select: text; }');
+    });
 }
 
 app.whenReady().then(createWindow);

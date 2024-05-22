@@ -7,9 +7,7 @@ let ip = store.get('ip', '0.0.0.0');
 let port = store.get('port', 3001);
 
 function connect() {
-    client.connect(port, ip, function() {
-        //console.log('Соединение установлено');
-    });
+    client.connect(port, ip, function() {});
 }
 
 client.on('data', function(data) {
@@ -22,11 +20,9 @@ client.on('data', function(data) {
 });
 
 client.on('close', function() {
-    //console.log('Соединение закрыто, попытка переподключения...');
     setTimeout(connect, 5000);
 });
 
 client.on('error', function(err) {
-    //console.error('Ошибка соединения: ', err);
     client.destroy();
 });
